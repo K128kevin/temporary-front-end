@@ -1,0 +1,13 @@
+<div id="top">
+    <div id="title">
+        Kevin's Predictions
+    </div>
+    <div id="nav">
+        <div id="nav-buttons">
+            <div class="button" ng-repeat="button in buttons" ng-click="navigateTo(button.url)">
+                {{button.name}}
+            </div>
+        </div>
+        <div ng-include="'components/html/login.html'"></div>
+    </div>
+</div>

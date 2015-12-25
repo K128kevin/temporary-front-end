@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Kevin Contact</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/homecontroller.js"></script>
+
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+<div id="main" ng-app="homecontroller" ng-controller="homecontroller" ng-init="init()">
+    <div ng-include="'components/html/top.html'"></div>
+    <div class="main-body" style="text-align:center;">
+        <h3>Contact</h3>
+        <p>You can reach me via email, Facebook, or Twitter.
+        <br>
+        <br>
+        Email: BTCPredictions@gmail.com<br>
+        Facebook: <a href="https://www.facebook.com/BTCPredictions/">https://www.facebook.com/BTCPredictions/</a><br>
+        Twitter: <a href="https://twitter.com/BTC_Predictions">https://twitter.com/BTC_Predictions</a></p>
+    </div>
+</body>
+</html>

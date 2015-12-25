@@ -1,0 +1,13 @@
+<div id="chart-container">
+    <div id="chart-metadata">
+        <select ng-model="chart.asset">
+            <option ng-repeat="(assetName, asset) in assets">{{assetName}}</option>
+        </select>
+        <select ng-model="chart.type">
+            <option ng-repeat="option in assets[chart.asset].timeOptions">{{option.name}}</option>
+        </select>
+        <div class="button" ng-click="refreshChart()">Refresh Chart</div>
+    </div>
+    <h2>{{currAsset}} - Next {{currChartType}}s</h2>
+    <div id="chart"></div>
+</div>

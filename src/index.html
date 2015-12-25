@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Kevin</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/homecontroller.js"></script>
+
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+    <div id="main" ng-app="homecontroller" ng-controller="homecontroller" ng-init="init()">
+        <div ng-include="'components/html/top.html'"></div>
+        <div class="main-body" style="text-align:center;">
+            <p>
+                Welcome to Kevin's Predictions! This web application uses artificial intelligence algorithms
+            to try to predict future values of currency pairs, cryptocurrencies, and (hopefully) many more
+            assets as we move forward. At the moment it is completely free to sign up and see the data. The
+            only information required is a valid email address. Please feel free to sign up, view the data,
+            and leave feedback. Constructive feedback is always appreciated! I am also happy to answer questions.
+            You can contact me at by email at btcpredictions@gmail.com. You can also reach me on Twitter
+            @BTC_Predictions or on Facebook.
+            </p>
+            <p style="font-weight:bold;">
+                Click <a href="/signup">here</a> to sign up
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+#top {
+    text-align: center;
+    padding: 1%;
+    padding-bottom: 5%;
+    border-bottom: solid 1px;
+}
+#title {
+    font-size: 160%;
+    margin-bottom: 1%;
+}
+#main {
+    width: 74%;
+    min-width: 1030px;
+    margin-left: 13%;
+    background: #b7e2f7;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px #888888;
+    padding-bottom: 1%;
+}
+#login {
+    float: right;
+    width: auto;
+    font-size: 70%;
+}
+#logged-in {
+    float: right;
+    width: auto;
+}
+.main-body {
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px #888888;
+    margin: 2%;
+    padding: 1%;
+    background-color: #7ec4e5;
+    display: block;
+}
+.signup-input {
+    display: block;
+    width: 100%;
+}
+.fields-container {
+    width: 30%;
+    margin-left: 35%;
+}
+#chart-container {
+    padding: 1%;
+}
+#chart {
+    margin: 1%;
+}
+#logout-link {
+    float: right;
+}
+#change-pass-link {
+    float: right;
+    margin-right: 5%;
+}
+#forgot-password-link {
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+#change-pass-container {
+    border-radius: 3px;
+    background-color: #f9f9bb;
+    box-shadow: 1px 1px 3px #888888;
+    padding: 1%;
+    font-size: 80%;
+    position: absolute;
+    margin-top: 2%;
+    z-index: 100;
+}
+.change-pass-field {
+    margin-top: 2%;
+    display: block;
+}
+.button {
+    width: auto;
+    display: inline-block;
+    border-radius: 2px;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    box-shadow: 1px 1px 3px #888888;
+    background-color: #81c7e8;
+}
+.change-pass-submit {
+    margin-top: 10%;
+    background-color: #c6c61d;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: rgba(240, 250, 255, 0.3);
+}
+.signup-button {
+    width: auto;
+    display: inline-block;
+    border-radius: 2px;
+    margin-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #094ca3;
+    color: white;
+}
+.signup-button:hover {
+    cursor: pointer;
+    background-color: rgba(48, 119, 211, 1.0);
+}
+.login-input {
+    width: 35%;
+}
+.highcharts-container {
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px #888888;
+}
+input {
+    border-radius: 3px;
+}

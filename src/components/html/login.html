@@ -1,0 +1,18 @@
+<div id="login" ng-hide="loggedIn">
+    <input type="text" ng-model="email" class="login-input" placeholder="Email"/>
+    <input type="password" ng-model="pass" class="login-input" placeholder="Password"/>
+    <div class="button" ng-click="login(email, pass)">Login</div>
+    <a id="forgot-password-link" href ng-click="forgotPassword()">Forgot Password</a>
+</div>
+<div id="logged-in" ng-show="loggedIn">
+    Logged In As {{currentUser}}
+    <br>
+    <a id="logout-link" href ng-click="logout()">Log Out</a>
+    <a id="change-pass-link" href ng-click="changePass = !changePass">Change Password</a>
+    <div id="change-pass-container" ng-show="changePass">
+        Current Password <input class="change-pass-field" ng-model="oldPass" type="password"/>
+        New Password <input class="change-pass-field" ng-model="newPass1" type="password"/>
+        Re-enter New Password<input class="change-pass-field" ng-model="newPass2" type="password"/>
+        <div class="button change-pass-submit" ng-click="changePassword(oldPass, newPass1, newPass2, currentUser)">Submit</div>
+    </div>
+</div>

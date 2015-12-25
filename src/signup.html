@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TabbNet Signup</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/homecontroller.js"></script>
+
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+    <body>
+        <div id="main" ng-app="homecontroller" ng-controller="homecontroller" ng-init="init()">
+            <div ng-include="'components/html/top.html'"></div>
+            <div class="main-body">
+                <div class="fields-container">
+                    Email
+                    <input ng-model="suEmail" class="signup-input" type="text"/>
+                    First Name
+                    <input ng-model="suFirstName" class="signup-input" type="text"/>
+                    Last Name
+                    <input ng-model="suLastName" class="signup-input" type="text"/>
+                    Password
+                    <input ng-model="suPass1" class="signup-input" type="password"/>
+                    Re-Enter Password
+                    <input ng-model="suPass2" class="signup-input" type="password"/>
+                    <div class="signup-button" ng-click="signup(suEmail, suFirstName, suLastName, suPass1, suPass2)">Submit</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

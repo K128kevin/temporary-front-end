@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TabbNet About</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/homecontroller.js"></script>
+
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+<div id="main" ng-app="homecontroller" ng-controller="homecontroller" ng-init="init()">
+    <div ng-include="'components/html/top.html'"></div>
+    <div class="main-body" style="text-align:center;">
+        <h3>What is this?</h3>
+        <p>
+            This site is a web application that I (Kevin) have created to publicly display the results of my
+            experiments involving artificial intelligence. Specifically, this work focuses on neural networks,
+            and even more specifically, it focuses on time series prediction for various commodities. On the
+            charts page, you can select a commodity and see a chart of predictions for that commodity for the
+            next 24 hours or for the next 5 days. You can also see how that chart performed over the past 24
+            hours or 5 days in a chart below, which overlays predicted and actual prices.
+        </p>
+        <h3>What does the answer to the previous section even mean?</h3>
+        <p>
+            Simply put, this web site displays predictions created by artificial intellgence algorithms. Currently,
+            the predictions being shown are time series predictions for various commodity prices/exchange rates. In
+            the future, I may work on providing predictions for other types of data sets.
+        </p>
+        <h3>How accurate is this?</h3>
+        <p>
+            It is difficult to provide a meaningful statistic to represent the accuracy of a predictive model like
+            this one. What I've found to be the most reasonable means of measuring accuracy is to calculate how far
+            off each point in each prediction is from the actual price, on average. This varies from commodity to
+            commodity, and you can see the value above the chart. At the time I am writing this, I have not yet done a
+            lot of experimenting with assets besides bitcoin, but the average error for the 24 hour bitcoin price
+            prediction chart is generally around 0.5%.
+        </p>
+        <h3>More details about testing and figures of accuracy</h3>
+        <p>
+            To calculate the average error of a chart, I run the neural network that created this chart on historic
+            price data. The process of creating a neural network that can predict future prices involves "training"
+            the neural network on historic price data. What I do for testing is that I set aside about 20% of my
+            historic data and do not use that for training the neural network. Once the neural network is trained,
+            I have it make predictions at every point in the allocated test data. I use these predictions to calculate
+            the average error. Just to clarify, the average error represents how far, on average, each predicted
+            point on the chart is off from the actual price at that time.
+        </p>
+        <h3>If this is so accurate, why are you sharing it?</h3>
+        <p>
+            The figures of accuracy above make this model sound like it is far more amazing than it is. It is important
+            to consider two things. One, 0.5% is just an average, and the error can easily be much higher than that
+            sometimes. Of course, it can be much lower (or even zero) at other times. Two, a 0.5% error is still a
+            reasonably sized error. If the prediction shows the price of bitcoin being at $450 at a given time, a 0.5%
+            error means that on average, it will be between $447.75 and $452.25. It is also possible that the price
+            could end up being way outside of that range.
+            <br><br>
+            Furthermore, I come to this from a computer science/artificial intelligence background, not a financial one.
+            I do not trade assets based on this data (or at all, for that matter). I simply find it to be a fun problem
+            to solve. I may try trading one day in the future, but right now I just see this as a complicated but fun
+            artificial intelligence/computer science challenge.
+        </p>
+        <h3>Who are you?</h3>
+        <p>
+            My name is Kevin and I am a software engineer. I graduated from college in spring of 2014 and I've been
+            working in the Boston area ever since. I mostly do web development, but I spend a lot of time on the side
+            learning about artificial intelligence and experimenting with time series prediction. I started working on
+            this project in the fall of 2013, and I had the very first version of the site up on March 13th, 2014. I
+            decided to create this not because of my interest in bitcoin and trading, but rather because I found (and still
+            find) artificial neural networks to be amazing. I learned about them during a couple of courses in college and
+            I'm constantly amazed by how they can perform complicated tasks often better than humans.
+        </p>
+    </div>
+</body>
+</html>
